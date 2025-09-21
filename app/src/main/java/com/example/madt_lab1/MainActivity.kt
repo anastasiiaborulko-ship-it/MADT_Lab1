@@ -31,6 +31,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-//Code for revert
-
 
