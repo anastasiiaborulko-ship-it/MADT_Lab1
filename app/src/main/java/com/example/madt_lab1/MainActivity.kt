@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.graphics.Color
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,10 +12,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val textView = findViewById<TextView>(R.id.textView)
-        val button = findViewById<Button>(R.id.buttonChangeText)
+        val buttonChangeText = findViewById<Button>(R.id.buttonChangeText)
+        val buttonChangeColor = findViewById<Button>(R.id.buttonChangeColor)
 
-        button.setOnClickListener {
-            textView.text = "Button clicked — text changed"
+        buttonChangeText.setOnClickListener {
+            textView.text = "Button clicked — text changed!"
+        }
+
+        buttonChangeColor.setOnClickListener {
+            textView.setTextColor(Color.RED)
         }
     }
 }
+
